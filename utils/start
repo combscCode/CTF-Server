@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# start ctf_server
+directory="$(cd "$(dirname "${0}")" > /dev/null 2>&1 && pwd)"
+app_dir="$directory/../ctf_server"
+cd "$app_dir"
+export FLASK_APP="$app_dir"
+export FLASK_ENV=development # enables debug mode
+flask run
